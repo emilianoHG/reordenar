@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Example reordenar</title>
+</head>
+<body>
+	<section>
+		<h1>Lista</h1>
+		<ul id="list-persons"></ul>
+	</section>
+	<hr>
+	<section>
+		<h1>Lista re-ordenada</h1>
+		<ul id="list-persons-2"></ul>
+	</section>
+	<script src="../reordenar.js"></script>
+	<script>
+
+		//define array
+		var list = ['Lenny','Carl','Bob','Marge','Homer','Bart','Lisa'];
+
+		//print list
+		list.map(function (person) {
+			console.log(person);
+			document.getElementById('list-persons').innerHTML += '<li>'+person+'</li>'
+		});
+
+		//return a new list
+		var newList = reordenar(list);
+
+		//print list
+		newList.map(function (person) {
+			console.log(person);
+			document.getElementById('list-persons-2').innerHTML += '<li>'+person+'</li>'
+		});
+
+	</script>
+</body>
+</html>
